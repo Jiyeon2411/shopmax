@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layouts/layout1}">
+
+<th:block layout:fragment="css">
+	<style>
+		select {
+			margin: 2px;
+			width: 33.33%;
+		}
+
+		a {
+			cursor: pointer
+		}
+	</style>
+</th:block>
+
+<div layout:fragment="content">
+	<div class="bg-light py-3">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 mb-0">
+					<a href="/">Home</a> <span class="mx-2 mb-0">/</span> <strong
+						class="text-black">상품관리</strong>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="site-section">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-12">
+					<h2 class="h3 mb-3 text-black">상품관리</h2>
+					<form>
+						<table class="table table-responsive-md">
+							<thead>
+								<tr>
+									<th scope="col">id</th>
+									<th scope="col">상품명</th>
+									<th scope="col">상태</th>
+									<th scope="col">등록자</th>
+									<th scope="col">등록일</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">1</th>
+									<td>Mark</td>
+									<td>Otto</td>
+									<td>@mdo</td>
+									<td>@mdo</td>
+								</tr>
+								<tr>
+									<th scope="row">2</th>
+									<td>Jacob</td>
+									<td>Thornton</td>
+									<td>@fat</td>
+									<td>@fat</td>
+								</tr>
+								<tr>
+									<th scope="row">3</th>
+									<td colspan="2">Larry the Bird</td>
+									<td>@twitter</td>
+									<td>@twitter</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<nav aria-label="...">
+							<ul class="pagination d-flex justify-content-center">
+								<li class="page-item disabled"><a class="page-link">이전</a>
+								</li>
+								<li class="page-item"><a class="page-link" href="#">1</a></li>
+								<li class="page-item active" aria-current="page">
+									<a class="page-link" href="#">2</a></li>
+								<li class="page-item"><a class="page-link" href="#">3</a></li>
+								<li class="page-item"><a class="page-link" href="#">다음</a>
+								</li>
+							</ul>
+						</nav>
+						
+						<div class="row" style="height: 40px;">
+							<div class="col-lg-2"></div>
+							<div class="col-lg-5" style="display:flex;">
+								<!-- 상품 등록일 -->
+								<select class="form-control">
+									<option value="all">전체기간</option>
+									<option value="1d">1일</option>
+									<option value="1w">1주</option>
+									<option value="1m">1개월</option>
+									<option value="6m">6개월</option>
+								</select>
+								<!-- 상품판매 상태 -->
+								<select class="form-control">
+									<option value="">판매상태(전체)</option>
+									<option value="SELL">판매</option>
+									<option value="SOLD_OUT">품절</option>
+								</select>
+								<!-- 상품명, 등록자 선택 -->
+								<select class="form-control">
+									<option value="itemNm">상품명</option>
+									<option value="createdBy">등록자</option>
+								</select>
+							</div>
+							<div class="col-lg-3">
+								<div style="display:flex;">
+									<input type="text" class="form-control"
+									placeholder="검색어 입력">
+									<button id="searchBtn" type="submit" class="btn btn-primary mb-3">검색</button>							
+								</div>
+							</div>
+							<div class="col-lg-2"></div>
+						</div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<th:block layout:fragment="script">
+	<script th:inline="javascript">
+		
+	</script>
+</th:block>
+
+</html>
