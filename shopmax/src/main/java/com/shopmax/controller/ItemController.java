@@ -69,7 +69,7 @@ public class ItemController {
 	}
 	
 	//상품관리 페이지
-	/*@GetMapping(value = {"/admin/items", "/admin/items/{page}"})
+	@GetMapping(value = {"/admin/items", "/admin/items/{page}"})
 	public String itemManage(ItemSearchDto itemSearchDto, 
 			@PathVariable("page") Optional<Integer> page, Model model) {
 		
@@ -84,7 +84,7 @@ public class ItemController {
 		model.addAttribute("maxPage",5); //상품관리 페이지 하단에 보여줄 최대 페이지 번호
 		
 		return "/item/itemMng";
-	}*/
+	}
 
 	//상품 수정페이지 보기
 	@GetMapping(value = "/admin/item/{itemId}")

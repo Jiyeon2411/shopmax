@@ -20,7 +20,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class ItemRestController {
 	
-	private final ItemService itemService;
+	/*private final ItemService itemService;
 	
 	@GetMapping(value = {"/admin/items", "/admin/items/{page}"})
 	public Page<Item> itemManage(ItemSearchDto itemSearchDto, 
@@ -37,5 +37,5 @@ public class ItemRestController {
 		//model.addAttribute("maxPage",5); //상품관리 페이지 하단에 보여줄 최대 페이지 번호
 		
 		return items;
-	}
+	}*/
 }
